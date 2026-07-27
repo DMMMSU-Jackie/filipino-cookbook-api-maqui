@@ -1,2 +1,7 @@
-# filipino-cookbook-api-maqui
-A RESTful API built with Slim Framework, PHP, and MySQL for managing Filipino food recipes. Features CRUD operations, Bearer Token Authentication, input validation, rate limiting, and secure error handling.
+# Filipino Cookbook API
+
+## 📚 Documentation
+
+The complete project documentation is available below.
+
+📄 **[Filipino Cookbook API Documentation](Filipino_Cookbook_API_Documentation.docx)**
