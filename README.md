@@ -1,3 +1,13 @@
+## 📄 Project Documentation
+
+This repository includes a complete technical documentation for the **Filipino Cookbook API**. The documentation provides a comprehensive guide to the project, including the system overview, installation procedures, project structure, API endpoint documentation, testing, troubleshooting, Git and GitHub workflow, and other supporting technical information.
+
+You can access and download the complete documentation here:
+
+**➡️ [Filipino Cookbook API Documentation (PDF)](./Filipino_Cookbook_API_Documentation.pdf)**
+
+> **Note:** If the PDF opens in your browser, click the **Download** button to save a copy locally.
+
 # Filipino Cookbook API
 
 A secure RESTful API developed using **PHP**, **Slim Framework 4**, and **MySQL** that provides structured access to Filipino recipes, food categories, ingredients, and origins. The API follows REST principles, returns JSON responses, and uses API Key Authentication to protect secured endpoints.
@@ -1359,3 +1369,420 @@ screenshots/
 | Invalid API Key | Shows the authentication error response. |
 | Food Not Found | Shows the response for a non-existent food ID. |
 | Invalid Request | Shows validation or malformed request errors. |
+
+# Git and GitHub Workflow
+
+This project uses **Git** for version control and **GitHub** for repository hosting. The following commands can be used to configure Git and upload the project to GitHub.
+
+---
+
+## Configure Git
+
+Before using Git, configure your GitHub username and email.
+
+Check the installed Git version.
+
+```cmd
+git --version
+```
+
+Configure your GitHub username.
+
+```cmd
+git config --global user.name "YOUR_GITHUB_USERNAME"
+```
+
+Configure your GitHub email.
+
+```cmd
+git config --global user.email "YOUR_GITHUB_EMAIL"
+```
+
+Verify the configuration.
+
+```cmd
+git config --global user.name
+git config --global user.email
+```
+
+---
+
+## Initialize the Repository
+
+Navigate to the project folder.
+
+```cmd
+cd /d C:\xampp\htdocs\filipino-cookbook-api
+```
+
+Initialize Git.
+
+```cmd
+git init
+```
+
+Verify the repository status.
+
+```cmd
+git status
+```
+
+---
+
+## Stage Project Files
+
+Stage all project files.
+
+```cmd
+git add .
+```
+
+Verify staged files.
+
+```cmd
+git status
+```
+
+---
+
+## Commit Changes
+
+Create the initial commit.
+
+```cmd
+git commit -m "Initial commit"
+```
+
+---
+
+## Rename the Default Branch
+
+```cmd
+git branch -M main
+```
+
+---
+
+## Connect to GitHub
+
+Add the GitHub repository as the remote origin.
+
+```cmd
+git remote add origin https://github.com/YOUR_GITHUB_USERNAME/YOUR_REPOSITORY_NAME.git
+```
+
+Verify the remote repository.
+
+```cmd
+git remote -v
+```
+
+---
+
+## Push to GitHub
+
+Upload the project.
+
+```cmd
+git push -u origin main
+```
+
+For future updates, use the following commands.
+
+```cmd
+git add .
+git commit -m "Describe the changes made"
+git push
+```
+
+---
+
+# Repository Verification
+
+Before submitting or sharing the project, verify that the repository contains the following files and folders.
+
+## Required Files
+
+- README.md
+- composer.json
+- composer.lock
+- config/
+- middleware/
+- public/
+- routes/
+- vendor/
+- storage/
+
+---
+
+## Verify Composer
+
+Ensure that Composer dependencies are installed.
+
+```cmd
+composer install
+```
+
+---
+
+## Verify the API
+
+Confirm that:
+
+- The API starts successfully.
+- Database connection works correctly.
+- API endpoints return valid JSON responses.
+- API Key Authentication functions properly.
+- CRUD operations work as expected.
+- HTTP status codes are returned correctly.
+
+---
+
+# Troubleshooting
+
+## 404 Not Found
+
+### Possible Causes
+
+- Incorrect endpoint URL
+- Apache is not running
+- Incorrect project folder name
+- Missing `.htaccess` configuration
+
+### Solution
+
+Verify that the URL is correct.
+
+Example:
+
+```text
+http://localhost/filipino-cookbook-api/public/api/foods
+```
+
+---
+
+## Composer Not Found
+
+### Error
+
+```text
+'composer' is not recognized as an internal or external command.
+```
+
+### Solution
+
+- Reinstall Composer.
+- Restart Command Prompt.
+- Verify Composer installation.
+
+```cmd
+composer --version
+```
+
+---
+
+## PHP Not Found
+
+### Error
+
+```text
+'php' is not recognized as an internal or external command.
+```
+
+### Solution
+
+Add PHP to the Windows PATH environment variable or use the full PHP executable path.
+
+Verify installation.
+
+```cmd
+php -v
+```
+
+---
+
+## Database Connection Failed
+
+### Possible Causes
+
+- MySQL is not running
+- Incorrect database credentials
+- Database does not exist
+
+### Solution
+
+- Start MySQL using XAMPP.
+- Verify the configuration in `config/database.php`.
+- Confirm that the `filipino_cookbook_api` database has been imported successfully.
+
+---
+
+## Unauthorized Access
+
+### Error
+
+```json
+{
+    "status": "error",
+    "message": "Unauthorized access."
+}
+```
+
+### Solution
+
+- Verify that the required API key is included in the request headers.
+- Confirm that the API key matches the value expected by the application.
+
+---
+
+## Internal Server Error
+
+### Error
+
+```text
+500 Internal Server Error
+```
+
+### Possible Causes
+
+- Database connection problem
+- SQL query failure
+- Missing dependency
+- PHP runtime error
+
+### Solution
+
+- Verify database connectivity.
+- Run `composer install`.
+- Check Apache and PHP error logs.
+- Review the application source code for runtime exceptions.
+
+---
+
+# Security Features
+
+The Filipino Cookbook API incorporates several security practices to improve application reliability and protect sensitive operations.
+
+Implemented security features include:
+
+- API Key Authentication
+- Prepared SQL Statements
+- Parameterized Queries
+- JSON Response Standardization
+- Exception Handling
+- Proper HTTP Status Codes
+- Modular Route Organization
+
+These practices help reduce common security risks such as unauthorized access and SQL injection attacks.
+
+---
+
+# Future Enhancements
+
+The project may be extended with additional features, including:
+
+- User authentication using JWT
+- Role-based access control
+- Image upload support for recipes
+- Pagination for large datasets
+- Advanced search and filtering
+- API documentation using Swagger/OpenAPI
+- Rate limiting
+- Request logging
+- Docker containerization
+- Unit and integration testing
+
+---
+
+# Contributing
+
+Contributions are welcome.
+
+To contribute:
+
+1. Fork the repository.
+2. Create a new branch.
+3. Implement your changes.
+4. Commit your changes.
+5. Push the branch to your fork.
+6. Open a Pull Request for review.
+
+---
+
+# License
+
+This project was developed for educational purposes.
+
+You may use, modify, and extend the project for learning and academic activities.
+
+---
+
+# Developer Information
+
+The following information identifies the developer and repository associated with this project.
+
+| Field | Information |
+|-------|-------------|
+| **Student Name** | Jackie Rose S. Maqui |
+| **Course and Section** | BS Information Technology — 4C |
+| **GitHub Username** | DMMMSU-Jackie |
+| **Repository Name** | filipino-cookbook-api-maqui |
+| **Repository Link** | https://github.com/DMMMSU-Jackie/filipino-cookbook-api-maqui |
+| **Date Completed** | July 2026 |
+
+---
+
+# Repository Information
+
+| Item | Description |
+|------|-------------|
+| **Project Title** | Filipino Cookbook API |
+| **Project Type** | RESTful Web API |
+| **Programming Language** | PHP 8.x |
+| **Framework** | Slim Framework 4 |
+| **Database** | MySQL |
+| **Authentication** | API Key Authentication |
+| **Response Format** | JSON |
+| **Version** | 1.0.0 |
+| **Status** | Completed |
+
+---
+
+# Acknowledgements
+
+This project was developed using the following technologies and tools:
+
+- PHP
+- Slim Framework 4
+- MySQL
+- Composer
+- Apache
+- XAMPP
+- Visual Studio Code
+- Thunder Client
+- Git
+- GitHub
+
+Special thanks to the developers and maintainers of these technologies for providing reliable open-source tools that support modern RESTful API development.
+
+---
+
+# License
+
+This project was developed for educational purposes as part of the requirements for the **Bachelor of Science in Information Technology** program.
+
+The source code may be used for learning, reference, and academic purposes. Any reuse, modification, or redistribution should properly acknowledge the original developer and repository.
+
+---
+
+# Contact
+
+For questions, suggestions, or collaboration regarding this project, please visit the GitHub repository below.
+
+**GitHub Profile**
+
+https://github.com/DMMMSU-Jackie
+
+**Repository**
+
+https://github.com/DMMMSU-Jackie/filipino-cookbook-api-maqui
